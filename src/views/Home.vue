@@ -7,11 +7,11 @@
       <!-- criado um v-ofor para percorrer toda a lista -->
     <div v-for="destination in destinations"
      :key="destination.name">
-    <router-link :to="destination.slug">
+    <router-link :to="{name: 'DestinationDetails', params: {slug:destination.slug}}">
       <h2>{{destination.name}}</h2>
     </router-link>
     <figure>
-      <router-link :to="destination.name">
+      <router-link :to="{name: 'DestinationDetails', params: {slug:destination.slug}}">
         <img :src="require(`@/assets/${destination.image}`)" 
         :alt="destination.name">
       </router-link>
@@ -47,5 +47,14 @@ img {
 .destinations{
   display: flex;
   justify-content: space-between;
+}
+
+a{
+  color:lightseagreen;
+  text-decoration:none;
+}
+a:houver,
+a:visited{
+  text-decoration:underline;
 }
 </style>
