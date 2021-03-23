@@ -1,6 +1,6 @@
 <template>
     <nav id="nav">
-    <p class="logo">The Vue SChool Travel App</p>
+      <p class="logo">The Vue SChool Travel App</p>
         <!-- <router-link to="/">Home</router-link>
         <router-link to="/brazil">Brazil</router-link>
         <router-link to="/panama">Panama</router-link>
