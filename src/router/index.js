@@ -74,6 +74,26 @@ const routes = [
 const router = new VueRouter({
 	mode: 'history',
 	linkExactActiveClass: 'vue-school-active-class',
+	scrollBehavior(to, from, savedPosition) {
+		if (savedPosition) {
+			return savedPosition;
+		} else {
+			const position = {};
+			// se nao tiver um caminho para ir, retorna para a posição do sletor
+			if (to.hash) {
+				position.selector = to.hash;
+				// modifica a posição para dar um folga do top da pagina
+				if (to.hash === 'experience') {
+					position.offset = { y: 140 };
+				}
+				if (document.querySelector(to.hash)) {
+					return position;
+				}
+
+				return false;
+			}
+		}
+	},
 	routes,
 });
 
