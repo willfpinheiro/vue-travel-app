@@ -24,8 +24,9 @@
 			login() {
 				store.user = this.username;
 				// direcionar o usuario para qualquer lugar
-
-				this.$router.push('/user');
+				// this.$router.push('/user');
+				const redirectPath = this.$route.query.redirect || '/';
+				this.$router.push(redirectPath);
 			},
 		},
 	};

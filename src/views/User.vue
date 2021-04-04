@@ -1,6 +1,14 @@
 <template>
 	<div>
 		<h1>Bem Vindo {{ user }}</h1>
+		<p>
+			<router-link
+				:to="{
+					name: 'invoices',
+				}"
+				>Invoices</router-link
+			>
+		</p>
 		<button @click="logOut" class="btn">Sair</button>
 	</div>
 </template>

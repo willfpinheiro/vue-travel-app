@@ -1,6 +1,6 @@
 <template>
 	<nav id="nav">
-		<p class="logo">Meu Pará</p>
+		<p class="logo">Vue Travel</p>
 		<!-- <router-link to="/">Home</router-link>
         <router-link to="/brazil">Brazil</router-link>
         <router-link to="/panama">Panama</router-link>
@@ -24,6 +24,7 @@
 				<router-link to="/user">DashBoard</router-link>
 			</li>
 		</ul>
+		<p class="link" style="align-items: right" to="">{{ usuario }}</p>
 	</nav>
 </template>
 <script>
@@ -32,14 +33,15 @@
 		data() {
 			return {
 				destinations: store.destinations,
+				usuario: store.user,
 			};
 		},
 	};
 </script>
 <style scoped>
 	#nav {
-		/* display: flex;
-	   align-items: center; */
+		display: flex;
+		align-items: center;
 		padding: 30px;
 		/* sempre vai ficar no top */
 		position: sticky;
