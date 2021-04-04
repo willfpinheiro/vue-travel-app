@@ -1,6 +1,6 @@
 <template>
 	<nav id="nav">
-		<p class="logo">The Vue SChool Travel App</p>
+		<p class="logo">Meu Pará</p>
 		<!-- <router-link to="/">Home</router-link>
         <router-link to="/brazil">Brazil</router-link>
         <router-link to="/panama">Panama</router-link>
@@ -8,7 +8,7 @@
         <router-link to="/jamaica">Jamaica</router-link> -->
 		<ul class="nav-links">
 			<li class="links">
-				<router-link to="/">Home</router-link>
+				<router-link to="/">Inicial</router-link>
 			</li>
 			<li v-for="destination in destinations" :key="destination.name" class="links">
 				<router-link
@@ -20,11 +20,14 @@
 					{{ destination.name }}
 				</router-link>
 			</li>
+			<li class="links">
+				<router-link to="/user">DashBoard</router-link>
+			</li>
 		</ul>
 	</nav>
 </template>
 <script>
-	import store from '@/store';
+	import store from '@/store.js';
 	export default {
 		data() {
 			return {
@@ -36,7 +39,7 @@
 <style scoped>
 	#nav {
 		/* display: flex;
-    align-items: center; */
+	   align-items: center; */
 		padding: 30px;
 		/* sempre vai ficar no top */
 		position: sticky;
