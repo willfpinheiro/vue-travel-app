@@ -24,7 +24,6 @@
 				<router-link to="/user">DashBoard</router-link>
 			</li>
 		</ul>
-		<p class="link" style="align-items: right" to="">{{ usuario }}</p>
 	</nav>
 </template>
 <script>
@@ -33,7 +32,6 @@
 		data() {
 			return {
 				destinations: store.destinations,
-				usuario: store.user,
 			};
 		},
 	};

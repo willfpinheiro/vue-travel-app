@@ -136,6 +136,7 @@ router.beforeEach((to, from, next) => {
 		if (!store.user) {
 			next({
 				name: 'login',
+				// aqui encomiunha para invoices
 				query: { redirect: to.fullPath },
 			});
 		} else {
